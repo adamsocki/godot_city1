@@ -3,16 +3,24 @@
 [ext_resource type="Texture2D" uid="uid://bsjy7rlh5dlij" path="res://images/floor1.png" id="1_dohvn"]
 [ext_resource type="Texture2D" uid="uid://d2ua340i0j0md" path="res://images/player.png" id="2_7br8g"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pl27y"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tcp7v"]
 texture = ExtResource("1_dohvn")
+texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-1:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01g2t"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xvhp"]
 texture = ExtResource("2_7br8g")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [resource]
-sources/0 = SubResource("TileSetAtlasSource_pl27y")
-sources/1 = SubResource("TileSetAtlasSource_01g2t")
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 7
+physics_layer_0/collision_mask = 7
+sources/4 = SubResource("TileSetAtlasSource_tcp7v")
+sources/5 = SubResource("TileSetAtlasSource_5xvhp")
