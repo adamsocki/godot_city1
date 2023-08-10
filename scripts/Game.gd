@@ -1,17 +1,15 @@
 extends Node2D
 
 var tile_map_path := "res://TileMap/"
-enum {TILE_GROUND = 4, TILE_PLAYER = 5}
+enum {TILE_DOOR = 0, TILE_GROUND = 4, TILE_PLAYER = 5}
 var NodeTileMap
 
-
 var ScenePlayer = load("res://scenes/player.tscn")
+var SceneDoor = load("res://scenes/door.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.game = self
-	
-	
 	
 	MapLoad()
 	MapStart()
@@ -36,8 +34,14 @@ func MapStart():
 		if id == TILE_GROUND:
 			pass
 		elif id == TILE_PLAYER:
-			var p = id == TILE_PLAYER
+			var player = id == TILE_PLAYER
 			var inst = ScenePlayer.instantiate()
 			inst.position = NodeTileMap.map_to_local(pos) + Vector2(4, 0)
 			self.add_child(inst)
 			NodeTileMap.set_cell(0, pos, -1) 
+		elif id == TILE_DOOR:
+			var door = id == TILE_DOOR
+			var inst = SceneDoor.instantiate()
+			inst.position = NodeTileMap.map_to_local(pos) + Vector2(4, 0)
+			self.add_child(inst)
+			NodeTileMap.set_cell(0, pos, -1)
