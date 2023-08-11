@@ -10,3 +10,4 @@ layer_0/tile_data = PackedInt32Array(1048578, 4, 0, 1048579, 4, 0, 1048580, 4, 0
 
 [node name="door" parent="." instance=ExtResource("2_faq8v")]
 position = Vector2(848, 496)
+to_level = 1

@@ -17,7 +17,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Input.is_action_just_pressed("reload"):
+		ReOpenLevel()
 
 
 func MapLoad():
@@ -45,3 +46,7 @@ func MapStart():
 			inst.position = NodeTileMap.map_to_local(pos) + Vector2(4, 0)
 			self.add_child(inst)
 			NodeTileMap.set_cell(0, pos, -1)
+
+
+func ReOpenLevel():
+	get_tree().reload_current_scene()
