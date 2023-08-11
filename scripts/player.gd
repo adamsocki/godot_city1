@@ -12,10 +12,10 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var in_door
 
 
-func _ready():
-	pass
-
 func _process(delta):
+	
+	
+	
 	if in_door:
 		$UP.visible = true
 	else:
