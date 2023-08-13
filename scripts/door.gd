@@ -11,7 +11,10 @@ func _process(delta):
 	if body_reference != null:
 		if body_reference.name == "Player" and body_reference.in_door:
 			if Input.is_action_just_pressed("input_up"):
-				Global.level = to_level
+				# SET LEVEL CHANGES
+				Global.from_level = Global.current_level
+				Global.current_level = to_level
+				
 				get_node("/root/Game").ReOpenLevel()
 
 

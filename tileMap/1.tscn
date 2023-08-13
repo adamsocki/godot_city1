@@ -1,13 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4ao7s5umjwpe"]
+[gd_scene load_steps=4 format=3 uid="uid://d4ao7s5umjwpe"]
 
 [ext_resource type="TileSet" uid="uid://dln8xqbf5ctqb" path="res://tileMap/tile_set.tres" id="1_206mq"]
 [ext_resource type="PackedScene" uid="uid://dpyb0yt2ti7py" path="res://scenes/door.tscn" id="2_w3gcn"]
+[ext_resource type="Script" path="res://scripts/tile_map.gd" id="2_ytyva"]
 
 [node name="TileMap" type="TileMap"]
-position = Vector2(-8, 88)
 tile_set = ExtResource("1_206mq")
 format = 2
-layer_0/tile_data = PackedInt32Array(1048578, 4, 0, 1048579, 4, 0, 1048580, 4, 0, 1048581, 4, 0, 1048582, 4, 0, 1048583, 4, 0, 1048584, 4, 0, 1048585, 4, 0, 1048586, 4, 0, 1048587, 4, 0, 1048588, 4, 0, 1048589, 4, 0, 1048590, 4, 0, 1048591, 4, 0, 1048592, 4, 0, 1048593, 4, 0, 1048594, 4, 0, 1048595, 4, 0, 1048596, 4, 0, 1048597, 4, 0, 1048598, 4, 0, 1048599, 4, 0, 1048600, 4, 0, 1048601, 4, 0, 1048602, 4, 0, 1048603, 4, 0, 1048604, 4, 0, 1048605, 4, 0, 1048606, 4, 0, 1048607, 4, 0, 1048608, 4, 0)
+layer_0/tile_data = PackedInt32Array(851973, 4, 0, 851974, 4, 0, 851975, 4, 0, 851976, 4, 0, 851977, 4, 0, 851978, 4, 0, 851979, 4, 0, 851980, 4, 0, 851981, 4, 0, 851982, 4, 0, 851983, 4, 0, 851984, 4, 0, 851985, 4, 0, 851986, 4, 0, 851987, 4, 0, 851988, 4, 0)
+script = ExtResource("2_ytyva")
 
 [node name="door" parent="." instance=ExtResource("2_w3gcn")]
-position = Vector2(94, 497)
+position = Vector2(192, 400)
