@@ -20,7 +20,13 @@ func _ready():
 	GameManager.init_game_manager()
 	
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	GameManager.update_game_manager(delta)
+
+
+
+enum StationTypes
+{
+	SURFACE, ABOVE, BELOW
+}

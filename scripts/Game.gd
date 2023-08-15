@@ -44,18 +44,18 @@ func MapLoad():
 func MapStart():
 	var player_coded_as_tile = false
 	var level_doors = {}
-	print('1')
+#	print('1')
 	if !NodeTileMap.player_tile_placement and NodeTileMap.get_children() != null:
-		print('2')
+#		print('2')
 		
 		for child in NodeTileMap.get_children():
-			print('3')
+#			print('3')
 			
 			if child.is_in_group("door"):
-				print('4')
+#				print('4')
 				
 				if child.to_level == Global.from_level:
-					print('5')
+#					print('5')
 					
 					var inst = ScenePlayer.instantiate()
 					inst.position = child.position
@@ -98,5 +98,4 @@ func MapStart():
 	
 
 func ReOpenLevel():
-	
 	get_tree().reload_current_scene()

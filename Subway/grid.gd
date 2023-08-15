@@ -6,7 +6,7 @@ var grid_size_x
 var grid_size_y
 
 var occupied_grid_locations
-var station_list
+var station_list = []
 
 
 func is_location_occupied(location_to_check : Vector2) -> bool:
@@ -26,9 +26,9 @@ func generate_new_station() -> Station:
 		station_location.x = randi_range(0, grid_size_x)
 		station_location.y = randi_range(0, grid_size_y)
 		to_create_station = is_location_occupied(station_location)
-
-	print("gen")
-	return Station.new("name",station_location)
+	var generated_station = Station.new("name",station_location)
+	add_to_station_list(generated_station)
+	return 
 
 
 func add_to_occupied_grid_location(grid_vector : Vector2):
@@ -36,6 +36,8 @@ func add_to_occupied_grid_location(grid_vector : Vector2):
 	pass
 	
 func add_to_station_list(station : Station):
+#	if station_list.count() == 0:
+#		station_list.resize(100)
 	station_list.append(station)
 
 

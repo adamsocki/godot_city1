@@ -12,8 +12,8 @@ func init_game_manager():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func update_game_manager(delta):
-	SubwayManager.update_subway_manager(delta)
 	GridManager.update_grid_manager(delta)
-	StationManager.update_station_manager(delta)
+	StationManager.update_station_manager(delta)	
+	SubwayManager.update_subway_manager(delta)
 	
 
