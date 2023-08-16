@@ -7,7 +7,10 @@ var grid_size_y
 
 var occupied_grid_locations
 var station_list = []
+
 var station_list_pop_sort = []
+var pop_pair_1 = []
+
 var station_list_emp_sort = []
 
 
@@ -58,6 +61,36 @@ func sort_pouplation_high_to_low():
 		print(station_list_pop_sort[i].nearby_population)
 	for i in station_list.size():
 		print(station_list[i].nearby_population)
+
+
+func calc_max_distance_by_top_number(num: int):
+	var greatest_distance = 0
+	var greatest_pair = null
+	var count = 0
+	for i in 5:
+		for j in 5:
+			if i != j:
+				var current_vector = station_list_pop_sort[i].grid_location
+				var next_vector = station_list_pop_sort[j].grid_location
+				
+				var distance = current_vector.distance_to(next_vector)
+			
+				if distance > greatest_distance:
+					greatest_distance = distance
+					greatest_pair = [station_list_pop_sort[i], station_list_pop_sort[j]]
+				count += 1
+				print(count)
+				print(current_vector)
+				print(next_vector)
+				print(distance)
+	
+	print("final")
+	print(greatest_pair[0].grid_location)
+	print(greatest_pair[1].grid_location)
+	print(greatest_distance)
+	pop_pair_1 = greatest_pair.duplicate()
+#	draw_line(greatest_pair[0].grid_location, greatest_pair[1].grid_location)
+#	print()
 
 func sort_employment_high_to_low():
 	pass

@@ -13,14 +13,15 @@ func init_grid_manager():
 	Grid_Display_Scene = grid_display_scene
 	
 	# CREATE RANDOM STATIONS
-	for a in 23:
+	for a in 38:
 		var new_station = Global.grid.generate_new_station()
 #		stations.append(new_station)
 #		print(new_station.grid_location)
 	
-	Grid_Display_Scene.init_grid_display()
 	
 	Global.grid.sort_pouplation_high_to_low()
+	Global.grid.calc_max_distance_by_top_number(5)
+	Grid_Display_Scene.init_grid_display()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
