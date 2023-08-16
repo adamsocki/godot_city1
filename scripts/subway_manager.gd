@@ -4,8 +4,12 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func init_subway_manager(num_of_lines):
+	
+	
+	
+	
 	for num in num_of_lines:
-#		var subway := Subway
+		var subway = Subway.new()
 		pass
 
 

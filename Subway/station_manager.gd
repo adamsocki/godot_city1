@@ -15,3 +15,6 @@ func update_station_manager(delta):
 	for station in stations:
 		pass
 #		print(station.grid_location)
+
+
+
