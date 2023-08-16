@@ -12,6 +12,12 @@ func init_grid_manager():
 	grid_display_scene.name = "GridDisplay"
 	add_child(grid_display_scene)
 	Grid_Display_Scene = grid_display_scene
+
+#	stations.resize(3)
+	for a in 3:
+		var new_station = Global.grid.generate_new_station()
+#		stations.append(new_station)
+#		print(new_station.grid_location)
 	
 	Grid_Display_Scene.init_grid_display()
 	
