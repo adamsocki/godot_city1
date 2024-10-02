@@ -11,10 +11,18 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var in_door
 
+func _ready():
+	EventBus.connect("player_entered_door", Callable(self, "_on_player_entered_door"))
+	EventBus.connect("player_exited_door", Callable(self, "_on_player_exited_door"))
+
+func _on_player_entered_door(to_level):
+	print("entered door. To Level: ", to_level	)
+
+func _on_player_exited_door():
+	print("ExitedDoor")
+	
 
 func _process(delta):
-	
-	
 	
 	if in_door:
 		$UP.visible = true
@@ -40,3 +48,10 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+
+
+func _on_level_loaded(door_position: Vector2):
+	# Set the player's position to the door's position
+	global_position = door_position

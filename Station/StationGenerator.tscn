@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://6y4qejoqn0d2"]
+
+[ext_resource type="Script" path="res://Station/station_generator.gd" id="1_rislj"]
+
+[node name="StationGenerator" type="Node2D"]
+script = ExtResource("1_rislj")

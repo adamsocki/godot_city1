@@ -23,6 +23,3 @@ func generate_demographics():
 	# Random Population Employment Data
 	nearby_population = randi_range(30, 2000)
 	nearby_employment = randi_range(30, 2000)
-
-
-

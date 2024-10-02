@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqxi7tcaqw16d"]
+
+[ext_resource type="Script" path="res://scripts/station_gen_test.gd" id="1_a6vaw"]
+
+[node name="StationGenTest" type="Node2D"]
+script = ExtResource("1_a6vaw")

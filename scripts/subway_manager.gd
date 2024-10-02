@@ -2,6 +2,9 @@ extends Node
 
 #@export var num_of_lines : int
 
+
+
+
 # Called when the node enters the scene tree for the first time.
 func init_subway_manager(num_of_lines):
 	

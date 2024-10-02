@@ -1,6 +1,9 @@
 extends Node
 
 
+
+
+
 var Grid_Display_Scene
 
 # Called when the node enters the scene tree for the first time.
@@ -13,15 +16,15 @@ func init_grid_manager():
 	Grid_Display_Scene = grid_display_scene
 	
 	# CREATE RANDOM STATIONS
-	for a in 38:
+	for a in 12:
 		var new_station = Global.grid.generate_new_station()
-#		stations.append(new_station)
-#		print(new_station.grid_location)
 	
 	
 	Global.grid.sort_pouplation_high_to_low()
-	Global.grid.calc_max_distance_by_top_number(5)
+	Global.grid.calc_max_distance_by_top_number(3)
 	Grid_Display_Scene.init_grid_display()
+	Global.grid.points_within_XY_of_line(3, true)
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

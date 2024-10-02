@@ -8,13 +8,11 @@ script = ExtResource("1_koufc")
 [node name="Map_Viewer" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 64.0
-offset_top = 64.0
-offset_right = 282.0
-offset_bottom = 192.0
+offset_right = 256.0
+offset_bottom = 152.0
 
 [node name="Map_Size" type="ColorRect" parent="Map_Viewer"]
-layout_mode = 0
+layout_mode = 1
 offset_right = 256.0
 offset_bottom = 152.0
 color = Color(0.145098, 0.384314, 0.384314, 0.682353)

@@ -36,6 +36,7 @@ func _draw():
 	print(vec2_line)
 	
 	draw_line(vec1_line, vec2_line, Color.ALICE_BLUE, 10)
+	
 func update_grid_display(delta):
 	pass
 	

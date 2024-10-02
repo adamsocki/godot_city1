@@ -7,6 +7,7 @@ var stations = []
 
 # Called when the node enters the scene tree for the first time.
 func init_station_manager():
+	# create all stations
 	pass
 
 
@@ -15,6 +16,3 @@ func update_station_manager(delta):
 	for station in stations:
 		pass
 #		print(station.grid_location)
-
-
-

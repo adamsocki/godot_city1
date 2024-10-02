@@ -14,7 +14,6 @@ var pop_pair_1 = []
 var station_list_emp_sort = []
 
 
-
 func is_location_occupied(location_to_check : Vector2) -> bool:
 	var is_occupied = false
 	if occupied_grid_locations == null:
@@ -67,8 +66,8 @@ func calc_max_distance_by_top_number(num: int):
 	var greatest_distance = 0
 	var greatest_pair = null
 	var count = 0
-	for i in 5:
-		for j in 5:
+	for i in num:
+		for j in num:
 			if i != j:
 				var current_vector = station_list_pop_sort[i].grid_location
 				var next_vector = station_list_pop_sort[j].grid_location
@@ -94,6 +93,23 @@ func calc_max_distance_by_top_number(num: int):
 
 func sort_employment_high_to_low():
 	pass
+
+	
+
+
+func points_within_XY_of_line(top_num: int, make_connection: bool) -> bool:
+	var is_within_XY = false
+	
+	for i in top_num:
+		if station_list_pop_sort[i].grid_location.x > pop_pair_1[0].grid_location.x and station_list_pop_sort[i].grid_location.x <  pop_pair_1[1].grid_location.x:
+			if station_list_pop_sort[i].grid_location.y >  pop_pair_1[0].grid_location.y and station_list_pop_sort[i].grid_location.y < pop_pair_1[1].grid_location.y:
+				is_within_XY = true
+	
+	if is_within_XY:
+		if make_connection:
+			pass
+			
+	return is_within_XY
 
 
 

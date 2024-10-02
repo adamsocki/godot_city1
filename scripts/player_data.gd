@@ -12,4 +12,3 @@ var level_to
 
 #func _init(pos := Vector2(0,0)):
 #	position = pos
-

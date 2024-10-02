@@ -12,11 +12,16 @@ var init_place_player = true
 var from_door = 0
 
 
+func _init():
+	Global.game = self
+	print("_init")
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.game = self
+	#Global.game = self
 #	PlayerData.c
+	print("_Game._ready")
 	
 	MapLoad()
 	MapStart()
@@ -47,7 +52,6 @@ func MapStart():
 #	print('1')
 	if !NodeTileMap.player_tile_placement and NodeTileMap.get_children() != null:
 #		print('2')
-		
 		for child in NodeTileMap.get_children():
 #			print('3')
 			
@@ -98,4 +102,5 @@ func MapStart():
 	
 
 func ReOpenLevel():
-	get_tree().reload_current_scene()
+	#get_tree().reload_current_scene()
+	pass
