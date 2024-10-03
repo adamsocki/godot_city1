@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*res://scripts/Global.gd"
 PlayerData="*res://scripts/player_data.gd"
-GridManager="*res://Subway/grid_manager.gd"
+WorldManager="*res://Subway/world_manager.gd"
 StationManager="*res://Subway/station_manager.gd"
 SubwayManager="*res://scripts/subway_manager.gd"
 GameManager="*res://Subway/Game_Manager.gd"

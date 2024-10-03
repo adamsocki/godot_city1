@@ -13,8 +13,6 @@ func _process(delta):
 	pass
 
 
-
-
 func MyInit():
 	
 	print("MyInitLevel man")
