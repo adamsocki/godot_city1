@@ -18,7 +18,8 @@ var world
 var init_place_player
 
 func _ready():
-	init_place_player = true
+	#init_place_player = true
+	pass
 	
 	
 	

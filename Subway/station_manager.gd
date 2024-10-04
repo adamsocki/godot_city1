@@ -36,13 +36,10 @@ func generate_new_station() -> Station:
 
 # Called when the node enters the scene tree for the first time.
 func init_station_manager():
-	# create all stations
+	
 	# CREATE RANDOM STATIONS
 	for a in 12:
 		var new_station = generate_new_station()
-		
-		
-	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

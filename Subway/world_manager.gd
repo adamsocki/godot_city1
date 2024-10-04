@@ -2,27 +2,13 @@ extends Node
 
 
 
-
-
 var World_Display_Scene
 
-#GRID CREATES W
 func init_world_manager():
 	
 	Global.world = World.new(100,100)
-	
-	
-	
-	
-	#
-	#Global.world.sort_pouplation_high_to_low()
-	#Global.world.calc_max_distance_by_top_number(3)
-	#World_Display_Scene.init_world_display()
-	#Global.world.points_within_XY_of_line(3, true)
 
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 
 func init_world_display():
 	var world_display_scene = load("res://scenes/Grid_Display.tscn").instantiate()
@@ -33,6 +19,11 @@ func init_world_display():
 	Global.world.calc_max_distance_by_top_number(3)
 	World_Display_Scene.init_world_display()
 	Global.world.points_within_XY_of_line(3, true)
+
+
+
+
+
 
 
 func update_world_manager(delta):
