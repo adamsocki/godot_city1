@@ -13,6 +13,8 @@ var nearby_employment : int
 var roomCount: int
 var rooms : Array[Room]
 
+var stationID: int 
+
 
 func _init(name_for_station: String, pos: Vector2):
 	world_location = pos

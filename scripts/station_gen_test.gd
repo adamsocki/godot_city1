@@ -17,6 +17,7 @@ const TILE_PLATFORM = 2
 const TILE_TRACK = 3
 const TILE_ENTRANCE = 4
 
+
 func _init():
 	var station_tile_map = generate_station(Vector2(10,10))
 	if station_tile_map != null:
