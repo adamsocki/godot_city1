@@ -11,17 +11,17 @@ func init_world_display():
 	for station in Global.world.stations:
 		
 		# SET STATION TO WORLD
-		var station_load_to_map = load("res://scenes/station.tscn").instantiate()
-		station_load_to_map.name = "pizza"
+		var station_display_load_to_map = load("res://scenes/station_display.tscn").instantiate()
+		station_display_load_to_map.name = "pizza"
 		
 		#SET STATION POSITION ON MAP_GUI
 		var scaledVector = Vector2(station.world_location.x * scaleFactor.x, station.world_location.y * scaleFactor.y)
-		station_load_to_map.position = scaledVector
+		station_display_load_to_map.position = scaledVector
 		
-		station_load_to_map.get_child(0).size.x *= station.nearby_population / 300
-		station_load_to_map.get_child(0).size.y *= station.nearby_population / 300
+		station_display_load_to_map.get_child(0).size.x *= station.nearby_population / 300
+		station_display_load_to_map.get_child(0).size.y *= station.nearby_population / 300
 		# ADD STATION AS CHILDREN
-		$Map_Viewer.add_child(station_load_to_map)
+		$Map_Viewer.add_child(station_display_load_to_map)
 
 func _draw():
 	var scaleFactor = Vector2($Map_Viewer.get_size().x / Global.world.world_size_x, $Map_Viewer.get_size().y / Global.world.world_size_y)

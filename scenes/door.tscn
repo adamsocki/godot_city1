@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://pjsg27of8fhb" path="res://images/door1.png" id="1_jowk4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sw31g"]
-size = Vector2(20, 26)
+size = Vector2(20, 22)
 
 [node name="door" type="Area2D" groups=["door"]]
 script = ExtResource("1_fxg7d")
@@ -13,7 +13,7 @@ script = ExtResource("1_fxg7d")
 texture = ExtResource("1_jowk4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
+position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_sw31g")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

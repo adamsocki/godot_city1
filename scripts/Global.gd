@@ -17,14 +17,25 @@ var world
 
 var init_place_player
 
+var currentViewportSize : Vector2
+
+var stationSize : Vector2
+var stationSizeWidth
+var stationSizeHeight
+
 func _ready():
-	#init_place_player = true
+	#init_place_player = true 
+	stationSize = get_viewport().size
+
+	#stationSizeHeight = ProjectSettings.get_setting("display/window/size/height")
 	pass
 	
 	
 	
 
-func _process(delta):
+func _process(delta): 
+	
+	currentViewportSize = get_viewport().size
 	pass
 
 

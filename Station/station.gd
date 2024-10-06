@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 class_name Station
 
 
@@ -14,6 +14,8 @@ var roomCount: int
 var rooms : Array[Room]
 
 var stationID: int 
+
+
 
 
 func _init(name_for_station: String, pos: Vector2):

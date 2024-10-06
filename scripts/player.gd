@@ -52,6 +52,6 @@ func _physics_process(delta):
 
 
 
-func _on_level_loaded(door_position: Vector2):
+func _on_station_loaded(door_position: Vector2):
 	# Set the player's position to the door's position
 	global_position = door_position

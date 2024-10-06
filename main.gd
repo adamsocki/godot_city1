@@ -11,14 +11,22 @@ func _ready():
 	StationManager.init_station_manager()
 	SubwayManager.init_subway_manager(2)
 	
-	levelManager = get_node("LevelManager") as LevelManager
 	var player = get_node("Player")
-
-	if levelManager != null and player != null:
-		levelManager.connect("level_loaded", Callable(player, "_on_level_loaded"))
-		levelManager.InitLevel()
-	else:
-		print("LevelManager or Player node not found!")
+	if player != null:
+		StationManager.connect("station_loaded", Callable(player, "on_station_loaded"))
+		
+		
+	#levelManager = get_node("LevelManager") as LevelManager
+	#var player = get_node("Player")
+	StationManager.load_station(0, player)
+	
+	
+#
+	#if levelManager != null and player != null:
+		#levelManager.connect("level_loaded", Callable(player, "_on_level_loaded"))
+		#levelManager.InitLevel()
+	#else:
+		#print("LevelManager or Player node not found!")
 		
 	## RENDERING  
 	WorldManager.init_world_display()
