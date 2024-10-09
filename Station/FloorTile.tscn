@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bso03e66jr7gn"]
+[gd_scene load_steps=6 format=3 uid="uid://bso03e66jr7gn"]
 
 [ext_resource type="Texture2D" uid="uid://bfks2076lorpp" path="res://images/MegaPixelArt32x32pxIcons_SpriteSheet.png" id="1_wcl1m"]
 
@@ -9,6 +9,14 @@ region = Rect2(128, 32, 32, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_620uk"]
 size = Vector2(32, 32)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5rbba"]
+a = Vector2(17, 0)
+b = Vector2(17, -3200)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_51lw1"]
+a = Vector2(17, 0)
+b = Vector2(17, -3200)
+
 [node name="FloorTile" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -16,3 +24,12 @@ texture = SubResource("AtlasTexture_4gmfa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_620uk")
+
+[node name="leftEdgeBlock" type="CollisionShape2D" parent="."]
+position = Vector2(-36, 0)
+shape = SubResource("SegmentShape2D_5rbba")
+disabled = true
+
+[node name="rightEdgeBlock" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_51lw1")
+disabled = true

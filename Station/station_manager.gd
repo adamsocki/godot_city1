@@ -4,7 +4,7 @@ extends Node
 #var stations = []
 
 
-signal level_loaded(door_global_position: Vector2)
+#signal level_loaded(door_global_position: Vector2)
 
 func add_to_station_list(station: Station):
 	Global.world.stations.append(station)
@@ -34,13 +34,16 @@ func load_station(stationID: int, player: Node):
 	var station_door  = firstLevel.get_node("door") as Door
 	if (station_door != null):
 		##var player = load("res://scenes/station.tscn")
-		emit_signal("level_loaded", station_door.global_position)
+		#emit_signal("level_loaded", station_door.global_position)
+		EventBus.emit_signal("station_loaded", station_door.position)
+		print("load Station DOor")
 		#
 		#print("doorfound")
 	#add_child(station)
 	var current_scene = get_tree().current_scene
-	if current_scene:
-		current_scene.queue_free()
+	if current_scene: 
+		pass
+		#current_scene.queue_free()
 	add_child(firstLevel)
 	#get_tree().root.add_child(firstLevel)
 	#get_tree().current_scene = firstLevel

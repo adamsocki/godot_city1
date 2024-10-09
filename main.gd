@@ -12,8 +12,8 @@ func _ready():
 	SubwayManager.init_subway_manager(2)
 	
 	var player = get_node("Player")
-	if player != null:
-		StationManager.connect("station_loaded", Callable(player, "on_station_loaded"))
+	#if player != null:
+		#StationManager.connect("station_loaded", Callable(player, "on_station_loaded"))
 		
 		
 	#levelManager = get_node("LevelManager") as LevelManager

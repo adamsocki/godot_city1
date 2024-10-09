@@ -73,10 +73,17 @@ static func generate_new_station() -> Station:
 	if (instance.get_node("CollisionShape2D").shape is RectangleShape2D):
 		doorSizeCollision = instance.get_node("CollisionShape2D").shape.extents
 
-	
-	for i in 10:
+	const tot_i = 10
+	for i in tot_i:
+		
 		var floorTileScene = load("res://Station/FloorTile.tscn")
+			
 		var floorTileSceneInstance = floorTileScene.instantiate()
+		if i == 0:
+			floorTileSceneInstance.get_node("leftEdgeBlock").disabled = false
+		if i == tot_i - 1:
+			floorTileSceneInstance.get_node("rightEdgeBlock").disabled = false
+			
 		if (floorTileSceneInstance.get_node("CollisionShape2D").shape is RectangleShape2D):
 			var floorTileSceneInstanceSize = floorTileSceneInstance.get_node("CollisionShape2D").shape.extents
 			floorTileSceneInstance.position = Vector2(doorLocation.x + (i * floorTileSceneInstanceSize.x ), doorLocation.y +  (floorTileSceneInstanceSize.y * 2))

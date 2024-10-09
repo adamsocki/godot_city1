@@ -1,8 +1,5 @@
 extends CharacterBody2D
 
-
-
-
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
@@ -14,6 +11,7 @@ var in_door
 func _ready():
 	EventBus.connect("player_entered_door", Callable(self, "_on_player_entered_door"))
 	EventBus.connect("player_exited_door", Callable(self, "_on_player_exited_door"))
+	EventBus.connect("station_loaded", Callable(self, "_on_station_loaded"))
 
 func _on_player_entered_door(to_level):
 	print("entered door. To Level: ", to_level	)
@@ -54,4 +52,7 @@ func _physics_process(delta):
 
 func _on_station_loaded(door_position: Vector2):
 	# Set the player's position to the door's position
-	global_position = door_position
+	print("eventstationLoaded")
+	print(door_position) 
+	door_position.x += 100
+	self.position = door_position

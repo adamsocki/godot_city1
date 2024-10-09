@@ -21,6 +21,7 @@ func _on_body_exited(body):
 
 
 func _process(delta):
+	print("playerPos: ", self.position)
 	pass
 	#if body_reference != null:
 		#if body_reference.name == "Player" and body_reference.in_door:
